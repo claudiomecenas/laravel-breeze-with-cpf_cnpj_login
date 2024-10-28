@@ -27,6 +27,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->registration() // add this line to enable registration in admin panel
             ->colors([
                 'primary' => Color::Amber,
             ])
