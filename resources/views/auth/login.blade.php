@@ -5,11 +5,18 @@
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
-        <!-- Email Address -->
+        {{-- <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div> --}}
+
+         <!-- CPF -->
+         <div>
+            <x-input-label for="cpf_cnpj" :value="__('CPF ou CNPJ')" />
+            <x-text-input id="cpf_cnpj" class="block mt-1 w-full" type="text" name="cpf_cnpj" :value="old('cpf_cnpj')" required autofocus autocomplete="username" />
+            <x-input-error :messages="$errors->get('cpf_cnpj')" class="mt-2" />
         </div>
 
         <!-- Password -->
